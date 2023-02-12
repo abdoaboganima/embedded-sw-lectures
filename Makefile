@@ -30,8 +30,7 @@ all: Build-Process.pdf
 # missing file reference and interactively asking you for an alternative.
 
 %.pdf: %.tex
-	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make $<
-	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make $<
-
+	echo | pdflatex $<
+	echo | pdflatex $<
 clean:
 	latexmk -CA
